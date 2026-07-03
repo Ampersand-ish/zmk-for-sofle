@@ -6,6 +6,7 @@
 #include <zmk/endpoints.h>
 #include <zmk/activity.h>
 #include <zmk/rgb_underglow.h>
+#include <zmk/keymap.h>
 
 #define NUM_LAYERS 8
 #define PER_KEY_LEDS 30
@@ -80,7 +81,7 @@ static void update_layer_backlight(uint8_t layer) {
     if (zmk_rgb_underglow_get_state(&underglow_on) < 0 || !underglow_on) {
         // If backlight is toggled off, keep all LEDs off
         struct led_rgb pixels[TOTAL_LEDS] = {0};
-        led_strip_update_rgb(led_strip, (struct led_rgb_px *)pixels, TOTAL_LEDS);
+        led_strip_update_rgb(led_strip, pixels, TOTAL_LEDS);
         return;
     }
     #endif
@@ -107,13 +108,13 @@ static void update_layer_backlight(uint8_t layer) {
         }
     }
 
-    led_strip_update_rgb(led_strip, (struct led_rgb_px *)pixels, TOTAL_LEDS);
+    led_strip_update_rgb(led_strip, pixels, TOTAL_LEDS);
 }
 
 static int rgb_layer_listener_cb(const zmk_event_t *eh) {
     const struct zmk_layer_state_changed *ev = as_zmk_layer_state_changed(eh);
     if (ev) {
-        update_layer_backlight(ev->layer);
+        update_layer_backlight(zmk_keymap_highest_layer_active());
     }
     return 0;
 }
