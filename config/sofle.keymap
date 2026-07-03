@@ -111,7 +111,7 @@
         };
 
         combo_copy {
-            bindings = <&kp LG(C)>;
+            bindings = <&kp LC(C)>;
             key-positions = <38 39>;        // X + C
             timeout-ms = <30>;
             require-prior-idle-ms = <150>;
@@ -119,7 +119,7 @@
         };
 
         combo_paste {
-            bindings = <&kp LG(V)>;
+            bindings = <&kp LC(V)>;
             key-positions = <39 40>;        // C + V
             timeout-ms = <30>;
             require-prior-idle-ms = <150>;
@@ -127,7 +127,7 @@
         };
 
         combo_cut {
-            bindings = <&kp LG(X)>;
+            bindings = <&kp LC(X)>;
             key-positions = <38 40>;        // X + V (skip middle)
             timeout-ms = <30>;
             require-prior-idle-ms = <150>;
@@ -206,7 +206,7 @@
             display-name = "NAV";
             bindings = <
 &trans         &trans      &trans      &trans        &trans        &trans                                       &trans       &trans      &trans        &trans       &trans       &trans
-&none          &none       &none       &none         &none         &none                                        &kp LG(LS(Z)) &kp LG(V)  &kp LG(C)     &kp LG(X)    &kp LG(Z)    &none
+&none          &none       &none       &none         &none         &none                                        &kp LC(LS(Z)) &kp LC(V)  &kp LC(C)     &kp LC(X)    &kp LC(Z)    &none
 &none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &none                                        &kp LEFT     &kp DOWN    &kp UP        &kp RIGHT    &kp CAPS     &none
 &none          &none       &none       &none         &none         &none          &trans         &trans         &kp INS      &kp HOME    &kp PG_DN     &kp PG_UP    &kp END      &none
                                        &trans        &trans        &none          &none          &none          &kp RET      &kp BSPC    &kp DEL       &trans       &trans
