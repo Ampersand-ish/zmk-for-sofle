@@ -31,6 +31,7 @@
 #define SYM   4
 #define FUN   5
 #define MOUSE 6
+#define GAMING 7
 
 // Sofle key positions (60 keys):
 // Row 0 (num):    0  1  2  3  4  5      6  7  8  9 10 11
@@ -214,7 +215,7 @@
             bindings = <
 &trans         &trans      &trans      &trans        &trans        &trans                                       &trans         &trans         &trans         &trans       &trans       &trans
 &none          &none       &none       &none         &none         &none                                        &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &none      &none
-&none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &none                                        &ext_power EP_TOG &kp C_PREV   &kp C_VOL_DN   &kp C_VOL_UP &kp C_NEXT   &none
+&none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &tog GAMING                                  &ext_power EP_TOG &kp C_PREV   &kp C_VOL_DN   &kp C_VOL_UP &kp C_NEXT   &none
 &none          &none       &none       &none         &none         &none          &trans         &trans         &out OUT_TOG   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
                                        &none         &none         &none          &none          &none          &kp C_STOP     &kp C_PP       &kp C_MUTE     &trans       &trans
             >;
