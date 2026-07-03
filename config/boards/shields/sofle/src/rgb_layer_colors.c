@@ -63,8 +63,8 @@ static const uint8_t layer_mapped_keys[NUM_LAYERS][PER_KEY_LEDS] = {
         [0] = 1, [1] = 1, [2] = 1, [3] = 1, [4] = 1, // Numbers
         [12] = 1, [14] = 1, [15] = 1,                 // Q, W, E, R
         [24] = 1, [25] = 1, [26] = 1, [27] = 1,       // LCTRL, A, S, D
-        [36] = 1, [37] = 1, [38] = 1,                 // LSHIFT, Z, X
-        [41] = 1                                      // SPACE
+        [18] = 1, [19] = 1, [20] = 1,                 // LSHIFT, Z, X
+        [23] = 1                                      // SPACE
     }
 };
 
