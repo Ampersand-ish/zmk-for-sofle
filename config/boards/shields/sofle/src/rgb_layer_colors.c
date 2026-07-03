@@ -5,7 +5,7 @@
 #include <zmk/event_manager.h>
 #include <zmk/endpoints.h>
 #include <zmk/activity.h>
-#include <zmk/underglow.h>
+#include <zmk/rgb_underglow.h>
 
 #define NUM_LAYERS 8
 #define PER_KEY_LEDS 30
@@ -81,7 +81,8 @@ static void update_layer_backlight(uint8_t layer) {
 
     // Check if underglow is globally enabled (Off is Off)
     #if IS_ENABLED(CONFIG_ZMK_RGB_UNDERGLOW)
-    if (!zmk_rgb_underglow_status()) {
+    bool underglow_on;
+    if (zmk_rgb_underglow_get_state(&underglow_on) < 0 || !underglow_on) {
         // If backlight is toggled off, keep all LEDs off
         struct led_rgb pixels[TOTAL_LEDS] = {0};
         led_strip_update_rgb(led_strip, (struct led_rgb_px *)pixels, TOTAL_LEDS);
