@@ -162,17 +162,6 @@
         };
     };
 
-    macros {
-        hyper: hyper {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp LGUI &kp LALT &kp LCTRL &kp LSHFT>,
-                <&macro_pause_for_release>,
-                <&macro_release &kp LGUI &kp LALT &kp LCTRL &kp LSHFT>;
-        };
-    };
-
     behaviors {
         // Encoder RGB brightness control (rgb_ug cannot be a sensor binding directly)
         rgb_encoder: rgb_encoder {
@@ -190,7 +179,7 @@
             bindings = <
 &kp GRAVE      &kp N1      &kp N2      &kp N3        &kp N4        &kp N5                                       &kp N6      &kp N7        &kp N8        &kp N9       &kp N0       &kp EQUAL
 &kp TAB        &kp Q       &kp W       &kp E         &kp R         &kp T                                        &kp Y       &kp U         &kp I         &kp O        &kp P        &kp BSPC
-&mt LCTRL ESC  &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F   &kp G                                        &kp H       &mt RSHFT J   &mt RCTRL K   &mt RALT L   &mt RGUI SQT &hyper
+&mt LCTRL ESC  &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F   &kp G                                        &kp H       &mt RSHFT J   &mt RCTRL K   &mt RALT L   &mt RGUI SQT &kp RET
 &kp LSHFT      &kp Z       &kp X       &kp C         &kp V         &kp B          &kp C_MUTE     &kp DEL         &kp N       &kp M         &kp COMMA     &kp DOT      &kp FSLH     &kp ESC
                                        &kp LGUI      &kp LALT      &lt MEDIA ESC  &lt NAV SPACE  &lt MOUSE TAB   &lt SYM RET &lt NUM BSPC  &lt FUN DEL   &kp RALT     &kp RGUI
             >;
