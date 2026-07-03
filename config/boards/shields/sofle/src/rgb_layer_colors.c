@@ -1,5 +1,8 @@
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
+
+#if !IS_ENABLED(CONFIG_ZMK_SPLIT) || IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+
 #include <zephyr/drivers/led_strip.h>
 #include <zmk/events/layer_state_changed.h>
 #include <zmk/event_manager.h>
@@ -121,3 +124,5 @@ static int rgb_layer_listener_cb(const zmk_event_t *eh) {
 
 ZMK_LISTENER(rgb_layer_listener, rgb_layer_listener_cb);
 ZMK_SUBSCRIPTION(rgb_layer_listener, zmk_layer_state_changed);
+
+#endif
