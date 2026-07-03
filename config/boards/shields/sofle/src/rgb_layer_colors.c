@@ -11,12 +11,7 @@
 #define PER_KEY_LEDS 30
 #define TOTAL_LEDS 36 // 6 underglow + 30 per-key
 
-// Layer Color definition
-struct led_rgb {
-    uint8_t r;
-    uint8_t g;
-    uint8_t b;
-};
+// Layer Color definition using the standard struct led_rgb from led_strip.h
 
 static const struct led_rgb layer_colors[NUM_LAYERS] = {
     [0] = {240, 240, 220}, // BASE: Off-white
