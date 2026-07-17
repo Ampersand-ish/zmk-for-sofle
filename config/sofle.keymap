@@ -265,7 +265,7 @@
             bindings = <
 &trans         &trans      &trans      &trans        &trans        &trans                                       &ol_cons ZMK_OLED_CONTRAST_DOWN 16 &ol_cons ZMK_OLED_CONTRAST_UP 16 &ol_cond &ol_brts ZMK_OLED_BRIGHTNESS_DOWN 10 &ol_brts ZMK_OLED_BRIGHTNESS_UP 10 &ol_pwr ZMK_OLED_POWER_TOGGLE
 &none          &none       &none       &none         &none         &none                                        &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &none      &none
-&none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &tog GAMING                                  &ext_power EP_TOG &kp C_PREV   &kp C_VOL_DN   &kp C_VOL_UP &kp C_NEXT   &none
+&none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &tog GAMING                                  &none &kp C_PREV   &kp C_VOL_DN   &kp C_VOL_UP &kp C_NEXT   &none
 &none          &none       &none       &none         &none         &none          &trans         &trans         &out OUT_TOG   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
                                        &none         &none         &none          &none          &none          &kp C_STOP     &kp C_PP       &kp C_MUTE     &trans       &trans
             >;
