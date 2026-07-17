@@ -1,0 +1,10 @@
+description: Custom LED strip wrapper for layer-specific lighting
+
+compatible: "zmk,custom-led-strip"
+
+include: led-strip.yaml
+
+properties:
+  real-strip:
+    type: phandle
+    required: true
