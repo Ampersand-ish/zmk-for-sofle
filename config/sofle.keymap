@@ -185,6 +185,41 @@
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
+
+        ol_con: ol_con {
+            compatible = "zmk-oled-brightness,behavior-oled-contrast";
+            #binding-cells = <1>;
+        };
+
+        ol_cond: ol_cond {
+            compatible = "zmk-oled-brightness,behavior-oled-contrast-default";
+            #binding-cells = <0>;
+        };
+
+        ol_brt: ol_brt {
+            compatible = "zmk-oled-brightness,behavior-oled-brightness";
+            #binding-cells = <1>;
+        };
+
+        ol_brts: ol_brts {
+            compatible = "zmk-oled-brightness,behavior-oled-brightness-step";
+            #binding-cells = <2>;
+        };
+
+        ol_cons: ol_cons {
+            compatible = "zmk-oled-brightness,behavior-oled-contrast-step";
+            #binding-cells = <2>;
+        };
+
+        ol_pwr: ol_pwr {
+            compatible = "zmk-oled-brightness,behavior-oled-power";
+            #binding-cells = <1>;
+        };
+
+        ol_prof: ol_prof {
+            compatible = "zmk-oled-brightness,behavior-oled-power-profile";
+            #binding-cells = <1>;
+        };
     };
 
     keymap {
