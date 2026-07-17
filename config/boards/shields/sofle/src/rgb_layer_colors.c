@@ -2,6 +2,8 @@
 
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
+#include <zephyr/devicetree.h>
+#include <zephyr/init.h>
 #include <zephyr/drivers/led_strip.h>
 #include <zmk/rgb_underglow.h>
 
@@ -77,7 +79,11 @@ struct custom_led_strip_config {
     uint32_t chain_length;
 };
 
-static int custom_led_strip_update_rgb(const struct device *dev, const struct led_rgb *pixels, size_t num_pixels) {
+static int custom_led_strip_update_rgb(const struct device *dev, struct led_rgb *pixels, size_t num_pixels) {
+    if (num_pixels > TOTAL_LEDS) {
+        num_pixels = TOTAL_LEDS;
+    }
+
     const struct custom_led_strip_config *config = dev->config;
     
     if (num_pixels == 0) {
@@ -181,7 +187,7 @@ static int custom_led_strip_init(const struct device *dev) {
                           &custom_led_strip_data_##inst, \
                           &custom_led_strip_config_##inst, \
                           POST_KERNEL, \
-                          95, \
+                          99, \
                           &custom_led_strip_api);
 
 DT_INST_FOREACH_STATUS_OKAY(CUSTOM_LED_STRIP_INIT_INST)
