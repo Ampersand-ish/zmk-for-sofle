@@ -45,18 +45,6 @@
 
 / {
     chosen {
-        zmk,underglow = &custom_strip;
-    };
-
-    custom_strip: custom_strip {
-        compatible = "zmk,custom-led-strip";
-        real-strip = <&led_strip>;
-        chain-length = <36>;
-        color-mapping = <
-            LED_COLOR_ID_GREEN
-            LED_COLOR_ID_RED
-            LED_COLOR_ID_BLUE
-        >;
-        status = "okay";
+        zmk,underglow = &led_strip;
     };
 };
