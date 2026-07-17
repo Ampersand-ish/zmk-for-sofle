@@ -226,7 +226,7 @@ static int rgb_layer_listener_cb(const zmk_event_t *eh) {
         
         bool underglow_on;
         if (zmk_rgb_underglow_get_state(&underglow_on) == 0 && underglow_on) {
-            zmk_rgb_underglow_set_hsb(&hsb);
+            zmk_rgb_underglow_set_hsb(hsb);
         }
     }
     return 0;
