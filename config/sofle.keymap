@@ -23,6 +23,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk-oled-brightness/oled-brightness.h>
 
 #define BASE  0
 #define NAV   1
@@ -196,7 +197,7 @@
 &kp TAB        &kp Q       &kp W       &kp E         &kp R         &kp T                                        &kp Y       &kp U         &kp I         &kp O        &kp P        &kp BSPC
 &mt LCTRL ESC  &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F   &kp G                                        &kp H       &mt RSHFT J   &mt RCTRL K   &mt RALT L   &mt RGUI SQT &kp RET
 &kp LSHFT      &kp Z       &kp X       &kp C         &kp V         &kp B          &kp C_MUTE     &kp DEL         &kp N       &kp M         &kp COMMA     &kp DOT      &kp FSLH     &kp ESC
-                                       &kp LGUI      &kp LALT      &lt MEDIA ESC  &lt NAV SPACE  &lt MOUSE TAB   &lt SYM RET &lt NUM BSPC  &lt FUN DEL   &kp RALT     &kp RGUI
+                                       &kp LGUI      &kp LALT      &lt MEDIA ESC  &lt NAV SPACE  &lt MOUSE TAB   &lt SYM SPACE &lt NUM BSPC  &lt FUN DEL   &kp RALT     &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -227,7 +228,7 @@
         media_layer {
             display-name = "MEDIA";
             bindings = <
-&trans         &trans      &trans      &trans        &trans        &trans                                       &trans         &trans         &trans         &trans       &trans       &trans
+&trans         &trans      &trans      &trans        &trans        &trans                                       &ol_cons ZMK_OLED_CONTRAST_DOWN 16 &ol_cons ZMK_OLED_CONTRAST_UP 16 &ol_cond &ol_brts ZMK_OLED_BRIGHTNESS_DOWN 10 &ol_brts ZMK_OLED_BRIGHTNESS_UP 10 &ol_pwr ZMK_OLED_POWER_TOGGLE
 &none          &none       &none       &none         &none         &none                                        &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &none      &none
 &none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &tog GAMING                                  &ext_power EP_TOG &kp C_PREV   &kp C_VOL_DN   &kp C_VOL_UP &kp C_NEXT   &none
 &none          &none       &none       &none         &none         &none          &trans         &trans         &out OUT_TOG   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
