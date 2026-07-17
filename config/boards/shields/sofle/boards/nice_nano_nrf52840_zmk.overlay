@@ -52,6 +52,11 @@
         compatible = "zmk,custom-led-strip";
         real-strip = <&led_strip>;
         chain-length = <36>;
+        color-mapping = <
+            LED_COLOR_ID_GREEN
+            LED_COLOR_ID_RED
+            LED_COLOR_ID_BLUE
+        >;
         status = "okay";
     };
 };
