@@ -44,15 +44,15 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <175>;
-    require-prior-idle-ms = <150>;
+    tapping-term-ms = <210>;
+    quick-tap-ms = <185>;
+    require-prior-idle-ms = <75>;
 };
 
 &lt {
     flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <175>;
+    tapping-term-ms = <210>;
+    quick-tap-ms = <185>;
 };
 
 / {
@@ -235,7 +235,7 @@
                                        &kp LGUI      &kp LALT      &lt MEDIA ESC  &lt NAV SPACE  &lt MOUSE TAB   &lt SYM SPACE &lt NUM BSPC  &lt FUN DEL   &kp RALT     &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         nav_layer {
@@ -270,7 +270,7 @@
                                        &none         &none         &none          &none          &none          &kp C_STOP     &kp C_PP       &kp C_MUTE     &trans       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &rgb_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_U &rgb_encoder>;
         };
 
         sym_layer {
