@@ -175,7 +175,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <210>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -257,7 +257,7 @@
 &trans         &trans      &trans      &trans        &trans        &trans                                       &trans      &trans        &trans        &trans       &trans       &trans
 &none          &kp LBKT    &kp N7      &kp N8        &kp N9        &kp RBKT                                     &none       &none         &none         &none        &none        &none
 &none          &kp SEMI    &kp N4      &kp N5        &kp N6        &kp EQUAL                                    &none       &kp RSHFT     &kp RCTRL     &kp RALT     &kp RGUI     &none
-&none          &kp GRAVE   &kp N1      &kp N2        &kp N3        &kp BSLH       &trans         &trans         &none       &none         &none         &none        &none        &none
+&none          &kp GRAVE   &kp N1      &kp N2        &kp N3        &kp FSLH       &trans         &trans         &none       &none         &none         &none        &none        &none
                                        &trans        &trans        &kp DOT        &kp N0         &kp MINUS      &none       &none         &none         &trans       &trans
             >;
         };
@@ -300,11 +300,11 @@
         mouse_layer {
             display-name = "MOUSE";
             bindings = <
-&trans         &trans      &trans      &trans        &trans        &trans                                       &trans         &trans         &trans         &trans           &trans     &trans
-&none          &none       &none       &none         &none         &none                                        &none          &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN   &none      &none
-&none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &none                                        &none          &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT  &none      &none
-&none          &none       &none       &none         &none         &none          &trans         &trans         &none          &msc SCRL_DOWN &msc SCRL_UP   &msc SCRL_RIGHT  &none      &none
-                                       &none         &none         &none          &none          &none          &mkp MCLK      &mkp LCLK      &mkp RCLK      &trans           &trans
+&trans         &trans      &trans      &trans        &trans        &trans                                       &trans         &trans          &trans         &trans           &trans     &trans
+&none          &none       &none       &none         &none         &none                                        &none          &msc SCRL_DOWN  &mmv MOVE_UP   &msc SCRL_UP   &none      &none
+&none          &kp LGUI    &kp LALT    &kp LCTRL     &kp LSHFT     &none                                        &none          &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &none      &none
+&none          &none       &none       &none         &none         &none          &trans         &trans         &none          &msc SCRL_DOWN  &msc SCRL_UP   &msc SCRL_RIGHT  &none      &none
+                                       &none         &none         &none          &none          &none          &mkp MCLK      &mkp LCLK       &mkp RCLK      &trans           &trans
             >;
         };
 
