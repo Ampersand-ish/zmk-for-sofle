@@ -311,11 +311,11 @@
         gaming_layer {
             display-name = "GAMING";
             bindings = <
-&kp GRAVE      &kp N1      &kp N2      &kp N3        &kp N4        &kp N5                                       &trans      &trans        &trans        &trans       &trans       &trans
-&kp TAB        &kp Q       &kp W       &kp E         &kp R         &kp T                                        &trans      &trans        &trans        &trans       &trans       &trans
-&kp LCTRL      &kp A       &kp S       &kp D         &kp F         &kp G                                        &trans      &trans        &trans        &trans       &trans       &trans
-&kp LSHFT      &kp Z       &kp X       &kp C         &kp V         &kp B          &kp C_MUTE     &trans         &trans      &trans        &trans        &trans       &trans       &trans
-                                       &kp LGUI      &kp LALT      &kp ESC        &kp SPACE      &tog GAMING    &trans      &trans        &trans        &trans       &trans
+&kp GRAVE      &as N1 N6   &as N2 N7   &as N3 N8     &as N4 N8     &kp N5 N9                                    &kp N6       &kp N7        &kp N8        &kp N9       &kp N0         &kp EQUAL   
+&kp TAB        &kp Q       &kp W       &kp E         &kp R         &kp T                                        &kp Y        &kp U         &kp I         &kp O        &kp P          &as LBKT RBKT  
+&kp LCTRL      &kp A       &kp S       &kp D         &kp F         &kp G                                        &kp H        &mt RSHFT J   &mt RCTRL K   &mt RALT L   &as SEMI COLON &kp RET        
+&kp LSHFT      &kp Z       &kp X       &kp C         &kp V         &kp B          &kp C_MUTE     &trans         &kp N        &kp M         &as LT COMMA  &as GT DOT   &as QMARK FSLH &kp ESC        
+                                       &kp LGUI      &kp LALT      &kp ESC        &kp SPACE      &tog GAMING    &lt SYM SPACE &lt NUM BSPC &lt FUN DEL   &kp RALT     &kp RGUI                      
             >;
         };
     };
